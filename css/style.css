@@ -2,6 +2,7 @@
 
 html {
 	box-sizing: border-box;
+	font-size: 62.5%;
 }
 *,
 *::before,
@@ -13,9 +14,25 @@ html {
 body {
 	font-family: 'Roboto', sans-serif;
 	display: flex;
-	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	min-height: 100vh;
 	overflow: hidden;
+}
+
+.bg {
+	background: url('https://cdn.pixabay.com/photo/2020/12/10/08/44/mountains-5819651_960_720.jpg') no-repeat center
+		center/cover;
+	width: calc(100vw + 6rem);
+	height: calc(100vh + 6rem);
+	z-index: -1;
+	position: absolute;
+	top: -3rem;
+	left: -3rem;
+	filter: blur(0px);
+}
+
+.loading-text {
+	color: #ffffff;
+	font-size: 5rem;
 }
