@@ -2,6 +2,7 @@
 
 html {
 	box-sizing: border-box;
+	font-size: 62.5%;
 }
 *,
 *::before,
@@ -12,10 +13,134 @@ html {
 }
 body {
 	font-family: 'Roboto', sans-serif;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+	overflow-x: hidden;
+	font-size: 1.6rem;
+	background-color: #222;
+	color: #333;
+}
+img {
+	max-width: 100%;
+}
+
+.container {
+	background-color: #fafafa;
+	transform-origin: top left;
+	transition: transform 0.5s linear;
+	width: 100vw;
 	min-height: 100vh;
-	overflow: hidden;
+	padding: 5rem;
+}
+
+.container.show-nav {
+	transform: rotate(-20deg);
+}
+
+.circle-container {
+	position: fixed;
+	top: -10rem;
+	left: -10rem;
+}
+
+.circle {
+	background-color: #ff9797;
+	width: 20rem;
+	height: 20rem;
+	border-radius: 50%;
+	position: relative;
+	transition: transform 0.5s linear;
+}
+
+.circle button {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	height: 10rem;
+	background: none;
+	border: 0;
+	font-size: 2.6rem;
+	color: #ffffff;
+	cursor: pointer;
+}
+
+.circle button:focus {
+	outline: none;
+}
+
+.circle button#open {
+	left: 60%;
+}
+.circle button#close {
+	top: 60%;
+	transform: rotate(90deg);
+	transform-origin: top left;
+}
+
+.container.show-nav + nav li {
+	transform: translateX(0);
+	transition-delay: 0.3s;
+}
+
+.container.show-nav .circle {
+	transform: rotate(-70deg);
+}
+
+nav {
+	position: fixed;
+	left: 0;
+	bottom: 2rem;
+}
+
+nav ul {
+	list-style: none;
+	margin-left: 3rem;
+}
+
+nav ul li {
+	margin: 4rem 0;
+	color: #ffffff;
+	text-transform: uppercase;
+	transform: translateX(-100%);
+	transition: all 0.4s ease-in;
+	cursor: pointer;
+}
+
+nav ul li:hover {
+	color: #ff9797;
+}
+
+nav ul li i {
+	font-size: 2rem;
+	margin-right: 1rem;
+}
+
+nav ul li + li {
+	margin-left: 1.5rem;
+	transform: translateX(-150%);
+}
+
+nav ul li + li + li {
+	margin-left: 3rem;
+	transform: translateX(-200%);
+}
+
+.content {
+	max-width: 100rem;
+	margin: 5rem auto;
+	color: #333;
+	line-height: 1.7;
+}
+
+small {
+	color: 555;
+	font-weight: 300;
+}
+
+.content h3 {
+	margin: 2rem 0;
+	text-transform: uppercase;
+}
+
+.content img {
+	margin: 2rem 0;
+	border-radius: 0.5rem;
 }
