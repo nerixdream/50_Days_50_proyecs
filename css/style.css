@@ -2,6 +2,7 @@
 
 html {
 	box-sizing: border-box;
+	font-size: 62.5%;
 }
 *,
 *::before,
@@ -11,6 +12,7 @@ html {
 	padding: 0;
 }
 body {
+	background: slateblue;
 	font-family: 'Roboto', sans-serif;
 	display: flex;
 	flex-direction: column;
@@ -18,4 +20,89 @@ body {
 	justify-content: center;
 	min-height: 100vh;
 	overflow: hidden;
+	font-size: 1.6rem;
+	color: #fff;
+}
+
+.container {
+	background: rgba(0, 0, 0, 0.7);
+	padding: 2rem 4rem;
+	border-radius: 0.5rem;
+}
+
+.container h1 {
+	font-size: 2.4rem;
+	color: #fff;
+	text-align: center;
+	margin: 3rem 0;
+}
+
+.container a {
+	text-decoration: none;
+	color: lightblue;
+}
+
+.form-control {
+	position: relative;
+	margin: 2rem 0 4rem;
+	width: 30rem;
+}
+
+.form-control input {
+	background-color: transparent;
+	border: 0;
+	border-bottom: 2px solid #fff;
+	width: 100%;
+	display: block;
+	padding: 1.5rem 0;
+	font-size: 1.8rem;
+	color: #fff;
+}
+
+.form-control input:focus,
+.form-control input:valid {
+	outline: 0;
+	border-bottom-color: steelblue;
+}
+
+.btn {
+	display: inline-block;
+	width: 100%;
+	padding: 1.5rem;
+	border-radius: 0.5rem;
+	background: lightblue;
+	font-size: 1.8rem;
+	color: darkslateblue;
+	cursor: pointer;
+}
+
+.btn:focus {
+	outline: 0;
+}
+
+.btn:active {
+	transform: scale(0.98);
+}
+
+.text {
+	margin: 4rem 0 2rem;
+}
+
+.form-control label {
+	position: absolute;
+	top: 1.5rem;
+	left: 0;
+}
+
+.form-control label span {
+	display: inline-block;
+	font-size: 1.8rem;
+	min-width: 5px;
+	transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-control input:focus + label span,
+.form-control input:valid + label span {
+	color: steelblue;
+	transform: translateY(-3rem);
 }
