@@ -2,6 +2,7 @@
 
 html {
 	box-sizing: border-box;
+	font-size: 62.5%;
 }
 *,
 *::before,
@@ -11,11 +12,32 @@ html {
 	padding: 0;
 }
 body {
+	background-color: darkcyan;
 	font-family: 'Roboto', sans-serif;
 	display: flex;
-	flex-direction: column;
+	flex-wrap: wrap;
 	align-items: center;
 	justify-content: center;
 	min-height: 100vh;
 	overflow: hidden;
+}
+
+.btn {
+	margin: 1rem;
+	background-color: darkslateblue;
+	color: #fff;
+	border: 0;
+	padding: 1rem 3rem;
+	border-radius: 0.3rem;
+	cursor: pointer;
+	text-transform: capitalize;
+	font-size: 1.8rem;
+}
+
+.btn:focus {
+	outline: 0;
+}
+
+.btn:active {
+	transform: scale(0.98);
 }
