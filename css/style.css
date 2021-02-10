@@ -2,6 +2,7 @@
 
 html {
 	box-sizing: border-box;
+	font-size: 62.5%;
 }
 *,
 *::before,
@@ -11,11 +12,40 @@ html {
 	padding: 0;
 }
 body {
+	background-color: darkorchid;
+	color: #fff;
 	font-family: 'Roboto', sans-serif;
 	display: flex;
-	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	min-height: 100vh;
 	overflow: hidden;
+}
+
+.counter-container {
+	display: flex;
+	flex-direction: column;
+	margin: 3rem 5rem;
+	align-items: center;
+	text-align: center;
+}
+
+.counter {
+	font-size: 6rem;
+	margin: 1rem 0;
+	font-weight: bold;
+}
+
+.fa-3x {
+	font-size: 5rem;
+}
+
+.counter-container span {
+	font-size: 1.8rem;
+}
+
+@media screen and (max-width: 580px) {
+	body {
+		flex-direction: column;
+	}
 }
