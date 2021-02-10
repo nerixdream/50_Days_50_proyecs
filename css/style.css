@@ -1,7 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:400,600&display=swap');
+
+:root {
+	--border-color: #144fc6;
+	--fill-color: #6ab3f8;
+}
 
 html {
 	box-sizing: border-box;
+	font-size: 62.5%;
 }
 *,
 *::before,
@@ -11,11 +17,96 @@ html {
 	padding: 0;
 }
 body {
-	font-family: 'Roboto', sans-serif;
+	background-color: #3494e4;
+	color: #fff;
+	font-family: 'Montserrat', sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 1.6rem;
+}
+
+h1 {
+	margin: 1rem;
+}
+
+h3 {
+	margin: 1rem;
+	font-weight: 400;
+}
+
+.cup {
+	background-color: #fff;
+	border: 4px solid var(--border-color);
+	color: var(--border-color);
+	border-radius: 0 0 4rem 4rem;
+	height: 33rem;
+	width: 15rem;
+	margin: 3rem 0;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+}
+
+.cup.cup-small {
+	height: 9rem;
+	width: 5rem;
+	border-radius: 0 0 1.5rem 1.5rem;
+	background-color: rgba(255, 255, 255, 0.9);
+	cursor: pointer;
+	font-size: 1.4rem;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	margin: 0.5rem;
+	transition: 0.3s ease;
+}
+
+.cup.cup-small.full {
+	background-color: var(--fill-color);
+	color: #fff;
+}
+
+.cups {
+	margin-top: 1rem;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	width: 280px;
+}
+
+.remained {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	min-height: 100vh;
-	overflow: hidden;
+	text-align: center;
+	flex: 1;
+	transition: 0.3s ease;
+}
+
+.remained span {
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+.remained small {
+	font-size: 1.2rem;
+}
+
+.percentage {
+	background-color: var(--fill-color);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 3rem;
+	font-weight: bold;
+	height: 0;
+	transition: 0.3s ease;
+}
+
+.text {
+	text-align: center;
+	margin: 0 0 0.5rem;
 }
