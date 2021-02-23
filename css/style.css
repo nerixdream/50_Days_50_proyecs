@@ -18,4 +18,44 @@ body {
 	justify-content: center;
 	min-height: 100vh;
 	overflow: hidden;
+	background-color: #000;
+}
+
+button {
+	background-color: purple;
+	border: 1px solid purple;
+	color: #fff;
+	font-family: inherit;
+	font-size: 14px;
+	letter-spacing: 2px;
+	margin: 10px 0;
+	overflow: hidden;
+	padding: 20px 30px;
+	position: relative;
+	text-transform: uppercase;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+button:focus {
+	outline: 0;
+}
+
+.circle {
+	position: absolute;
+	background-color: #fff;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	animation: scale 0.5s ease-out;
+}
+
+@keyframes scale {
+	to {
+		transform: translate(-50%, -50%) scale(3);
+		opacity: 0;
+	}
 }
