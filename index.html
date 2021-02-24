@@ -3,11 +3,18 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Project</title>
+		<title>Drawing App</title>
 		<link rel="stylesheet" href="css/style.css" />
 	</head>
 	<body>
-		<h1>Project starter</h1>
+		<canvas width="800" height="800" id="canvas"></canvas>
+		<div class="toolbox">
+			<button id="decrease">-</button>
+			<span id="size">20</span>
+			<button id="increase">+</button>
+			<input type="color" id="color" />
+			<button id="clear">X</button>
+		</div>
 		<script src="js/index.js"></script>
 	</body>
 </html>
