@@ -1,7 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
-
 html {
 	box-sizing: border-box;
+	font-size: 62.5%;
 }
 *,
 *::before,
@@ -11,11 +10,41 @@ html {
 	padding: 0;
 }
 body {
-	font-family: 'Roboto', sans-serif;
+	background-color: slateblue;
 	display: flex;
-	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	min-height: 100vh;
 	overflow: hidden;
+}
+
+.empty {
+	width: 15rem;
+	height: 15rem;
+	background-color: #fff;
+	border: solid 0.3rem #000;
+	margin: 1rem;
+}
+
+.fill {
+	background-image: url('https://source.unsplash.com/random/150x150');
+	height: 14.5rem;
+	width: 14.5rem;
+	cursor: pointer;
+}
+
+.hold {
+	border: 0.5rem solid #ccc;
+}
+
+.hovered {
+	background-color: #333;
+	border-color: white;
+	border-style: dashed;
+}
+
+@media (max-width: 80rem) {
+	body {
+		flex-direction: column;
+	}
 }
