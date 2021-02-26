@@ -13,11 +13,91 @@ html {
 }
 body {
 	font-family: 'Roboto', sans-serif;
+	min-height: 100vh;
+	font-size: 1.6rem;
+}
+
+.slider-container {
+	height: 100vh;
+	overflow: hidden;
+	position: relative;
+	width: 100vw;
+}
+
+.left-slide {
+	width: 35%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: transform 0.5s ease-in-out;
+}
+
+.left-slide > div {
+	height: 100%;
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	min-height: 100vh;
-	overflow: hidden;
-	font-size: 1.6rem;
+	color: #fff;
+}
+
+.left-slide > div h1 {
+	font-size: 4rem;
+	margin-bottom: 1rem;
+	font-weight: 300;
+}
+
+.right-slide {
+	position: absolute;
+	top: 0;
+	left: 35%;
+	width: 65%;
+	height: 100%;
+	transition: transform 0.5s ease-in-out;
+}
+
+.right-slide > div {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	width: 100%;
+	height: 100%;
+}
+
+button {
+	font-size: 1.8rem;
+	padding: 1.2rem;
+	background-color: #fff;
+	color: #aaa;
+	border: none;
+	cursor: pointer;
+	transition: color 0.2s ease;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+	color: #222;
+}
+
+button:focus {
+	outline: 0;
+}
+
+.action-buttons button {
+	position: absolute;
+	top: 50%;
+	left: 35%;
+}
+
+.action-buttons .down-button {
+	transform: translateX(-100%);
+	border-top-left-radius: 0.5rem;
+	border-bottom-left-radius: 0.5rem;
+}
+.action-buttons .up-button {
+	transform: translateY(-100%);
+	border-top-right-radius: 0.5rem;
+	border-bottom-right-radius: 0.5rem;
 }
