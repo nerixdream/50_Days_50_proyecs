@@ -12,6 +12,7 @@ html {
 	padding: 0;
 }
 body {
+	background-color: #37487c;
 	font-family: 'Roboto', sans-serif;
 	display: flex;
 	flex-direction: column;
@@ -20,4 +21,31 @@ body {
 	min-height: 100vh;
 	overflow: hidden;
 	font-size: 1.6rem;
+	color: #fff;
+}
+
+div {
+	position: absolute;
+	bottom: 2rem;
+	background-color: rgba(0, 0, 0, 0.1);
+	padding: 1rem 2rem;
+	font-size: 1.8rem;
+}
+
+input {
+	width: 5rem;
+	padding: 0.5rem;
+	font-size: 1.8rem;
+	background-color: #37487c;
+	border: none;
+	text-align: center;
+	color: #fff;
+}
+
+input:focus {
+	outline: none;
+}
+
+label {
+	padding-right: 1rem;
 }
